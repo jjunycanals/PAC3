@@ -13,4 +13,4 @@ TypeScript és un superset de JavaScript. És un codi de s'ha de compilar a Java
 
 5. Funcionalitats addicionals a JavaScript (funcions JS de próxima generació). Com ara: arrow functions, template literals(``), desestructuració, promeses,etc. També permet l'ús de funcions de meta-programming com ara decorators, que permeten afegir comportament addicional a les classes i els seus mètodes.
 
-5. Detectar errors més ràpids: TypeScript realitza comprovacions de tipus en temps de compilació, cosa que ajuda a detectar errors de codi abans de l'execució. Això evita molts errors comuns que podrien passar desapercebuts en JavaScript.
+6. Detectar errors més ràpids: TypeScript realitza comprovacions de tipus en temps de compilació, cosa que ajuda a detectar errors de codi abans de l'execució. Això evita molts errors comuns que podrien passar desapercebuts en JavaScript.
