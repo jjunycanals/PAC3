@@ -1,15 +1,24 @@
 {
   "name": "1.0.0",
   "version": "1.0.0",
-  "description": "",
+  "description": "Crea una carpeta PAC3 i inicialitza git en aquesta ruta. Igual que a les anteriors PAC, has de crear un fitxer README.md a l'arrel de la carpeta que contingui que contindrà almenys aquesta informació \r • Login UOC : jjunyc\r • Nom i cognoms de l’alumne: Jordi Juny Canals\r • Breu descripció del que s'ha realitzat en aquesta PAC, dificultats, millores realitzades, si cal tenir alguna cosa en compte a l'hora de corregir/executar la pràctica o qualsevol aspecte que vulgueu destacar.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server"
   },
-  "author": "",
+  "author": "jordi juny",
   "license": "ISC",
   "devDependencies": {
+    "lite-server": "^2.6.1",
     "typescript": "^5.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjunycanals/PAC3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jjunycanals/PAC3/issues"
+  },
+  "homepage": "https://github.com/jjunycanals/PAC3#readme"
 }
