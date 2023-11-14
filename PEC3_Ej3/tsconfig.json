@@ -1,12 +1,12 @@
 {
-  "compilerOptions": {
+  "compilerOptions": { // Aquí es detallen les opcions de com TypeScript compilarà el codi
     /* Basic Options */
-    "target": "es2015", 
-    "module": "commonjs", 
-    "outDir": "./dist",   
-    "rootDir": "./src", 
-    "strict": true,
-    "incremental": true,
-    "tsBuildInfoFile": "./buildcache",
+    "target": "es2015",  // Target indica la versió d'ECMAScript a utilitzar. Es a dir en la qual es convertirà el codi TypeScript cap a JavaScript. Aquest cas està configurat ES2015 que és ES6.
+    "module": "commonjs", // Module indica quins mòduls s'utlitzaran. En aquest cas "commonjs" es un sistema de móduls tipic dels entorns Node.js.
+    "outDir": "./dist",  // OutDir especifica la carpeta de sortida on s'ubicaran els fitxers JavaScript transpilats. Segons el definit aquí s'ubicaran dins del directori ./dist.
+    "rootDir": "./src", // rootDir indica la carpeta d'inici per la cerca de fitxers TypeScript. Això serveix per assegurar que només es processen els fitxers TypeScript dins de la carpeta src.
+    "strict": true, // Strict en aquest cas amb el seu valor TRUE, habilita les restricciones estrictes de TypeScript, que permeten identificar errors i errors potencials al codi. En el cas que fos FALSE estaria deshabilitat.
+    "incremental": true, // Incremental habilita la compilació incremental, és a dir, guarda la informació de la compilació anterior i només compila els fitxer canviats.
+    "tsBuildInfoFile": "./buildcache", // tsBuildInfoFile es on s'emmgatzema certa informació de construcció de TypeScript. L'arxiu ./buildcache contindrà la informació per realitzar les compilacions incrementals que he parlat en el punt anterior.
   }
 }
