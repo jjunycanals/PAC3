@@ -3,6 +3,11 @@ Crea una carpeta PAC3 i inicialitza git en aquesta ruta. Igual que a les anterio
 • Nom i cognoms de l’alumne: Jordi Juny Canals
 • Breu descripció del que s'ha realitzat en aquesta PAC, dificultats, millores realitzades, si cal tenir alguna cosa en compte a l'hora de corregir/executar la pràctica o qualsevol aspecte que vulgueu destacar.
 
+1. Tasca 1 i exercici 2 hi han molts errors de typescript i algun codi afegit addicional, quen m'ha servit per compendre l'exercici, entendre les variables, provar casos i exemplificar el que després responc a la teoria.
+
+
+
+
 Enllaç de GIT: https://github.com/jjunycanals/PAC3.git
 
 echo "# jjunycanals" >> README.md
