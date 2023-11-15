@@ -1,1 +1,1 @@
-var app = new TodoController(new TodoService(), new TodoView());
+const app = new TodoController(new TodoService(), new TodoView());

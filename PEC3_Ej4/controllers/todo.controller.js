@@ -6,34 +6,39 @@
  * @param model
  * @param view
  */
-var TodoController = /** @class */ (function () {
-    function TodoController(service, view) {
-        var _this = this;
-        this.onTodoListChanged = function (todos) {
-            _this.view.displayTodos(todos);
-        };
-        this.handleAddTodo = function (todoText) {
-            _this.service.addTodo(todoText);
-        };
-        this.handleEditTodo = function (id, todoText) {
-            _this.service.editTodo(id, todoText);
-        };
-        this.handleDeleteTodo = function (id) {
-            _this.service.deleteTodo(id);
-        };
-        this.handleToggleTodo = function (id) {
-            _this.service.toggleTodo(id);
-        };
-        this.service = service;
-        this.view = view;
-        // Explicit this binding
-        this.service.bindTodoListChanged(this.onTodoListChanged);
-        this.view.bindAddTodo(this.handleAddTodo);
-        this.view.bindEditTodo(this.handleEditTodo);
-        this.view.bindDeleteTodo(this.handleDeleteTodo);
-        this.view.bindToggleTodo(this.handleToggleTodo);
-        // Display initial todos
-        this.onTodoListChanged(this.service.todos);
-    }
-    return TodoController;
-}());
+class TodoController {
+  constructor(service, view) {
+    this.service = service;
+    this.view = view;
+
+    // Explicit this binding
+    this.service.bindTodoListChanged(this.onTodoListChanged);
+    this.view.bindAddTodo(this.handleAddTodo);
+    this.view.bindEditTodo(this.handleEditTodo);
+    this.view.bindDeleteTodo(this.handleDeleteTodo);
+    this.view.bindToggleTodo(this.handleToggleTodo);
+
+    // Display initial todos
+    this.onTodoListChanged(this.service.todos);
+  }
+
+  onTodoListChanged = todos => {
+    this.view.displayTodos(todos);
+  };
+
+  handleAddTodo = todoText => {
+    this.service.addTodo(todoText);
+  };
+
+  handleEditTodo = (id, todoText) => {
+    this.service.editTodo(id, todoText);
+  };
+
+  handleDeleteTodo = id => {
+    this.service.deleteTodo(id);
+  };
+
+  handleToggleTodo = id => {
+    this.service.toggleTodo(id);
+  };
+}
