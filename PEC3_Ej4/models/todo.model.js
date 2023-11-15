@@ -3,20 +3,18 @@
  *
  * Manages the data of the application.
  */
-
-class Todo {
-  constructor({ text, complete } = { complete: false }) {
-    this.id = this.uuidv4();
-    this.text = text;
-    this.complete = complete;
-  }
-
-  uuidv4() {
-    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
-      (
-        c ^
-        (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
-      ).toString(16)
-    );
-  }
-}
+var Todo = /** @class */ (function () {
+    function Todo(_a) {
+        var _b = _a === void 0 ? { text: '', complete: false } : _a, text = _b.text, complete = _b.complete;
+        this.id = this.uuidv4();
+        this.text = text;
+        this.complete = complete || false;
+    }
+    Todo.prototype.uuidv4 = function () {
+        return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, function (c) {
+            return (c ^
+                (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16);
+        });
+    };
+    return Todo;
+}());
