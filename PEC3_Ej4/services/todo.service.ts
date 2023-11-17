@@ -5,8 +5,8 @@
  */
 import { Todo } from '../models/todo.model';
 
-class TodoService {
-  private todos: Todo[];
+export class TodoService {
+  todos: Todo[];
   constructor() {
     this.todos = (JSON.parse(localStorage.getItem("todos")) || []).map(
       (todo: any) => new Todo(todo)
