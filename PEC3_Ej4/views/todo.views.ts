@@ -149,9 +149,11 @@ export class TodoView {
   bindToggleTodo(handler: (id: string) => void): void {
     this.todoList.addEventListener("change", event => {
       if (event.target instanceof HTMLInputElement && event.target.type === "checkbox") {
-        const id = event.target.parentElement.id;
+        const id = event.target.parentElement?.id;
+        if (id) {
+          handler(id);
+        }
 
-        handler(id);
       }
     });
   }

@@ -129,9 +129,12 @@ var TodoView = /** @class */ (function () {
     };
     TodoView.prototype.bindToggleTodo = function (handler) {
         this.todoList.addEventListener("change", function (event) {
+            var _a;
             if (event.target instanceof HTMLInputElement && event.target.type === "checkbox") {
-                var id = event.target.parentElement.id;
-                handler(id);
+                var id = (_a = event.target.parentElement) === null || _a === void 0 ? void 0 : _a.id;
+                if (id) {
+                    handler(id);
+                }
             }
         });
     };
