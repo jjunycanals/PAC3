@@ -1,12 +1,13 @@
+"use strict";
 // Sustituye /***/ por las instrucciones adecuadas que cumplan las operaciones 
 // y salidas indicadas en los comentarios.
 function printLines() {
-    for (var key in myHangar) {
-        var lines = myHangar[key];
-        console.log("".concat(key, ":").concat(lines.model, "(").concat(lines.npassengers, ")"));
+    for (let key in myHangar) {
+        const lines = myHangar[key];
+        console.log(`${key}:${lines.model}(${lines.npassengers})`);
     }
 }
-var myHangar = {};
+let myHangar = {};
 myHangar['123Z'] = {
     model: 'airbus',
     npassengers: 200

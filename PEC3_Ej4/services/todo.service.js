@@ -11,6 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TodoService = void 0;
 /**
  * @class Service
  *
@@ -56,3 +57,4 @@ var TodoService = /** @class */ (function () {
     };
     return TodoService;
 }());
+exports.TodoService = TodoService;
