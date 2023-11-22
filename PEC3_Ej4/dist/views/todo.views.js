@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TodoView = void 0;
 var TodoView = /** @class */ (function () {
     function TodoView() {
         this.app = this.getElement("#root");
@@ -140,4 +137,4 @@ var TodoView = /** @class */ (function () {
     };
     return TodoView;
 }());
-exports.TodoView = TodoView;
+export { TodoView };

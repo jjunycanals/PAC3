@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TodoController = void 0;
 var TodoController = /** @class */ (function () {
     function TodoController(service, view) {
         var _this = this;
@@ -32,4 +29,4 @@ var TodoController = /** @class */ (function () {
     }
     return TodoController;
 }());
-exports.TodoController = TodoController;
+export { TodoController };

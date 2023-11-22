@@ -1,4 +1,3 @@
-"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -10,17 +9,15 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TodoService = void 0;
 /**
  * @class Service
  *
  * Manages the data of the application.
  */
-var todo_model_1 = require("../../src/models/todo.model");
+import { Todo } from '../models/todo.model.js';
 var TodoService = /** @class */ (function () {
     function TodoService() {
-        this.todos = (JSON.parse(localStorage.getItem("todos")) || []).map(function (todo) { return new todo_model_1.Todo(todo); });
+        this.todos = (JSON.parse(localStorage.getItem("todos")) || []).map(function (todo) { return new Todo(todo); });
     }
     TodoService.prototype.bindTodoListChanged = function (callback) {
         this.onTodoListChanged = callback;
@@ -31,13 +28,13 @@ var TodoService = /** @class */ (function () {
         localStorage.setItem("todos", JSON.stringify(todos));
     };
     TodoService.prototype.addTodo = function (text) {
-        this.todos.push(new todo_model_1.Todo({ text: text }));
+        this.todos.push(new Todo({ text: text }));
         this._commit(this.todos);
     };
     TodoService.prototype.editTodo = function (id, updatedText) {
         this.todos = this.todos.map(function (todo) {
             return todo.id === id
-                ? new todo_model_1.Todo(__assign(__assign({}, todo), { text: updatedText }))
+                ? new Todo(__assign(__assign({}, todo), { text: updatedText }))
                 : todo;
         });
         this._commit(this.todos);
@@ -51,10 +48,10 @@ var TodoService = /** @class */ (function () {
     };
     TodoService.prototype.toggleTodo = function (_id) {
         this.todos = this.todos.map(function (todo) {
-            return todo.id === _id ? new todo_model_1.Todo(__assign(__assign({}, todo), { complete: !todo.complete })) : todo;
+            return todo.id === _id ? new Todo(__assign(__assign({}, todo), { complete: !todo.complete })) : todo;
         });
         this._commit(this.todos);
     };
     return TodoService;
 }());
-exports.TodoService = TodoService;
+export { TodoService };

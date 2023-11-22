@@ -1,6 +1,6 @@
-
-var path = require('path');
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var path = require("path");
 module.exports = {
     entry: './src/app.ts',
     devtool: 'inline-source-map',
@@ -11,6 +11,7 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
+                include: [path.resolve(__dirname, 'src')],
                 exclude: /node_modules/,
                 loader: 'awesome-typescript-loader'
             }
